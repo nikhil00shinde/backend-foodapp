@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 const emailValidator = require("email-validator");
 const crypto = require("crypto");
-const db_link = "mongodb://localhost:27017";
+require('dotenv').config();
+const db_link = `mongodb://admin:${process.env.MONGO}@ac-yq58ure-shard-00-00.rjpjhyn.mongodb.net:27017,ac-yq58ure-shard-00-01.rjpjhyn.mongodb.net:27017,ac-yq58ure-shard-00-02.rjpjhyn.mongodb.net:27017/?ssl=true&replicaSet=atlas-so0kx3-shard-0&authSource=admin&retryWrites=true&w=majority`;
+
 
 
 mongoose
