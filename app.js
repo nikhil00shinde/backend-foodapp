@@ -12,7 +12,7 @@ app.use(express.json())
 
 // tell app about frontend
 app.use(express.static("public/build"))
-let port = process.env.port || 5000;
+let port = process.env.PORT || 5000;
 app.listen(port,()=>{
   console.log("listening ",port)
 });
